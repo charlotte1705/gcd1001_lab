@@ -94,7 +94,7 @@ async function display_products(shop_id,session){
         }
         table_string += 
         `<td> 
-            <button type='submit' name='crud' value='insert'>Insert</button>
+            <button type='submit' name='crud' value='insert' class = 'dontshow' >Insert</button>
         </td>`
         table_string += '</tr></form>';
 }        
