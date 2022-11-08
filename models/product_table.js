@@ -17,7 +17,7 @@ async function display_products(shop_id,session){
     // pg_conn.end();
     // init the table_string, with the table tag
     let table_string = 
-        `<table border='1'>
+        `<table class="table table-dark table-hover">
             <tr>`;
     //display all headers of table
     let num_fields = data.fields.length;
@@ -61,8 +61,8 @@ async function display_products(shop_id,session){
         if(session.shop_id!=0){
             table_string += 
             `<td> 
-                    <button type='submit' name='crud' value='delete'>Delete</button>
-                    <button type='submit' name='crud' value='update'>Update</button>
+                    <button type='submit' class="btn btn-light"  name='crud' value='delete'>Delete</button>
+                    <button type='submit' class="btn btn-info" name='crud' value='update'>Update</button>
                 </td>
             </tr></form>`
 
@@ -92,9 +92,13 @@ async function display_products(shop_id,session){
                 }
             }
         }
+      
+
         table_string += 
         `<td> 
-            <button type='submit' name='crud' value='insert' class = 'dontshow' >Insert</button>
+            <button type='submit' 
+            class="btn btn-success"
+            name='crud' value='insert' class = 'dontshow' >Insert</button>
         </td>`
         table_string += '</tr></form>';
 }        
@@ -102,6 +106,8 @@ async function display_products(shop_id,session){
     // console.log("DATA: -->")
     // console.log(data)
     // console.log(table_string)
+    table_string += 
+    "<style> body { background-image: url(dragon.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; image-rendering: 100%; }</style>"
     return table_string;
     
 }

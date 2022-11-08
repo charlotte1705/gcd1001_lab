@@ -25,6 +25,7 @@ router.post('/crud', async function(req, res, next) {
   let results = await crud(req.body,session);
   //refresh the page
   let table = await display_product(session.shop_id,session);
+  console.log(table);
   res.render('users', { title: 'welcome to ATN', 
                         name: session.user_id, 
                         table_string: table})

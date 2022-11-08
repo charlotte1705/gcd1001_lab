@@ -35,4 +35,3 @@ async function crud(req_body,session){
 }
 
 module.exports = crud;
-
