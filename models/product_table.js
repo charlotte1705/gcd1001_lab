@@ -31,7 +31,6 @@ async function display_products(shop_id,session){
             table_string += `<th>${data.fields[i].name}</th>`;
         }
     }
-
     if(session.shop_id !=0){
         table_string += `<th>actions</th>`
     }
@@ -106,7 +105,7 @@ async function display_products(shop_id,session){
     // console.log("DATA: -->")
     // console.log(data)
     // console.log(table_string)
-    table_string += 
+    // table_string += 
     "<style> body { background-image: url(dragon.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; image-rendering: 100%; }</style>"
     return table_string;
     
